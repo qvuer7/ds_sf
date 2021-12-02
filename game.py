@@ -1,11 +1,16 @@
 import numpy as np 
 
 def game() -> int:
+    """Let user guess random number
+
+    Returns:
+        int: number of attempts user take to guess
+    """
     number = np.random.randint(1,100)
     count = 0
+    
     while True: 
         count +=1 
-        
         predicted = int(input('give me your guess ->'))
         
         if predicted > number : 
@@ -14,6 +19,7 @@ def game() -> int:
             print("predicted is less then actual")
         else: 
             break
+        
     return count
 
 if __name__ == "__main__":
