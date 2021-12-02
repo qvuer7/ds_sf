@@ -14,16 +14,19 @@ def predict_number(number:int, min:int, max:int) -> int:
     """
     
     count = 0 
-    
+
     while True:
+        
         count+=1
         predicted = np.random.randint(min,max)
+        
         if predicted > number: 
             max = predicted
         elif predicted < number: 
                 min = predicted
         else: 
             break
+        
     return count
 
 def mean_attempts(predict_number) -> int: 
@@ -37,7 +40,9 @@ def mean_attempts(predict_number) -> int:
     """
     
     s = 0
+    
     for _ in range(1,100):
+        
         number = np.random.randint(1,100)
         s += predict_number(number, 1,100)
         
