@@ -2,9 +2,7 @@ import numpy as np
 
 def game() -> int:
     number = np.random.randint(1,100)
-    
     count = 0
-    
     while True: 
         count +=1 
         
